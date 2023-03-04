@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
     <title>Početna</title>
@@ -31,18 +35,16 @@
  
 </div>
 
-<div class="input-group">
-    <input type="text" class="input-control" id="candidate">
-
-<div class="input-group-append">
-    <button onclick="addItem()" class="btn btn-add" type="button">Add</button>
-    
+<div class="book">
+    <input type="text" name="text" id="txt" required>
+    <button type="submit" class=" btn-list">Add</button>
 </div>
+<div class="list-items">
+    <ul>
+        <li>Na Drini ćuprija<span>x</span></li>
+        <li>Tvrdjava<span>x</span></li>
+    </ul>
 </div>
-<ul id="dynamic-list">
-    
-</ul>
-
 <script src="main.js"></script>
 
 
