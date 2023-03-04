@@ -1,10 +1,29 @@
-function addItem(){
-    var ul = document.getElementById("dynamic-list");
-    var candidate = document.getElementById("candidate");
-    var li = document.createElement("li");
-    li.setAttribute('id', candidate.value);
-    li.appendChild(document.createTextNode(candidate.value));
-    ul.appendChild(li);
+const inputText = document.querySelector('#txt');
+const myButton = document.querySelector('.btn-list');
+const list = document.querySelector('.list-items ul');
+myButton.addEventListener('click', (e)=>{
+if(inputText.value !=""){
+    //create li
+    const myLi = document.createElement('li') ;
+    myLi.innerHTML = inputText.value;
+    list.appendChild(myLi);
+    //create span
+    const mySpan = document.createElement('span');
+    mySpan.innerHTML = 'x';
+    myLi.appendChild(mySpan);
 
 }
+const close = document.querySelectorAll('span');
+for(let i=0; i<close.length; i++){
+    close[i].addEventListener('click', ()=>{
+        close[i].parentElement.style.opacity = 0;
+        setTimeout(()=>{
+            close[i].parentElement.style.display = "none";
+        },500);
+        
+    })
+}
+inputText.value = "";
+
+});
 
